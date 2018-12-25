@@ -81,6 +81,12 @@
     <Compile Include="RegForm.Designer.cs">
       <DependentUpon>RegForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAdd.Designer.cs">
+      <DependentUpon>UCAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCChooseMarkAndShowProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </Compile>
     <EmbeddedResource Include="RegForm.resx">
       <DependentUpon>RegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAdd.resx">
+      <DependentUpon>UCAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCChooseMarkAndShowProduct.resx">
       <DependentUpon>UCChooseMarkAndShowProduct.cs</DependentUpon>

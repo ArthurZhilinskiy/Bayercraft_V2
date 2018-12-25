@@ -182,11 +182,11 @@
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroPanel metroPanel2;
-        private MetroFramework.Controls.MetroComboBox cmbMarks;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label btnCancel;
         private MetroFramework.Controls.MetroTextBox tbSearch;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lNameCategory;
+        public MetroFramework.Controls.MetroComboBox cmbMarks;
     }
 }

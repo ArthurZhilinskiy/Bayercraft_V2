@@ -434,6 +434,7 @@
             this.btnAdd.UseCustomBackColor = true;
             this.btnAdd.UseCustomForeColor = true;
             this.btnAdd.UseSelectable = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // MainForm
             // 
@@ -456,8 +457,6 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
@@ -479,9 +478,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label btnCancel;
         private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private MetroFramework.Controls.MetroButton btnAdd;
         private MetroFramework.Controls.MetroButton btnRemove;
         private MetroFramework.Controls.MetroButton btnChange;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public MetroFramework.Controls.MetroPanel metroPanel1;
     }
 }

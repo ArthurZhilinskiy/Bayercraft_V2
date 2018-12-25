@@ -39,5 +39,12 @@ namespace BayercraftApp
             Label label = sender as Label;
             uc.lNameCategory.Text = label.Text;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Controls.Add(new UCAdd(this, uc));
+            metroPanel1.Enabled = false;
+        }
     }
 }

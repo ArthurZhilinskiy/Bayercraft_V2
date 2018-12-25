@@ -23,7 +23,7 @@ namespace BayercraftApp
 
         string connstring = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\Bayerncraft.mdb";
 
-        void LoadMarks()
+        public void LoadMarks()
         {
             OleDbConnection connection = new OleDbConnection(connstring);
             try
