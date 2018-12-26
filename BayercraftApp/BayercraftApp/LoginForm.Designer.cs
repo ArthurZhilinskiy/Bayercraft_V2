@@ -44,11 +44,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(40, 109);
+            this.label1.Location = new System.Drawing.Point(34, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 42);
+            this.label1.Size = new System.Drawing.Size(181, 42);
             this.label1.TabIndex = 1;
-            this.label1.Text = "BayerCraft";
+            this.label1.Text = "BayernCraft";
             // 
             // label2
             // 
@@ -169,7 +169,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BayercraftApp.Properties.Resources.icons8_wheel_80;
-            this.pictureBox1.Location = new System.Drawing.Point(81, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(84, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

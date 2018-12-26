@@ -50,7 +50,7 @@ namespace BayercraftApp
             }
         }
 
-        void LoadProducts(string nameCutegory)
+        public void LoadProducts(string nameCutegory)
         {
             OleDbConnection connection = new OleDbConnection(connstring);
             try
@@ -75,12 +75,15 @@ namespace BayercraftApp
                     { 
                         image = Properties.Resources.icons8_unsplash_80;
                     }
-                    flowLayoutPanel1.Controls.Add(new Cart(reader["Название"].ToString(),
-                                                           reader["Описание"].ToString(),
-                                                           reader["Цена"].ToString(),
-                                                           image,
-                                                           reader["ID_Марки"].ToString())
-                                                           );
+                    flowLayoutPanel1.Controls.Add(new Cart(lNameCategory.Text,
+                                                             reader["ID"].ToString(),
+                                                             reader["Название"].ToString(),
+                                                             reader["Описание"].ToString(),
+                                                             reader["Цена"].ToString(),
+                                                             image,
+                                                             reader["ID_Марки"].ToString(),
+                                                             this)
+                                                             );
                 }
                 reader.Close();
             }
@@ -122,12 +125,15 @@ namespace BayercraftApp
                     {
                         image = Properties.Resources.icons8_unsplash_80;
                     }
-                    flowLayoutPanel1.Controls.Add(new Cart(reader["Название"].ToString(),
-                                                           reader["Описание"].ToString(),
-                                                           reader["Цена"].ToString(),
-                                                           image,
-                                                           reader["ID_Марки"].ToString())
-                                                           );
+                    flowLayoutPanel1.Controls.Add(new Cart(lNameCategory.Text,
+                                                               reader["ID"].ToString(),
+                                                               reader["Название"].ToString(),
+                                                               reader["Описание"].ToString(),
+                                                               reader["Цена"].ToString(),
+                                                               image,
+                                                               reader["ID_Марки"].ToString(),
+                                                               this)
+                                                               );
                 }
                 reader.Close();
             }
@@ -241,7 +247,7 @@ namespace BayercraftApp
         //    }
         //}
 
-        private void lNameCategory_TextChanged(object sender, EventArgs e)
+        public void lNameCategory_TextChanged(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
             cmbMarks.SelectedIndex = -1;

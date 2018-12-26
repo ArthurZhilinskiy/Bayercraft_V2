@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.cmbMarks = new MetroFramework.Controls.MetroComboBox();
-            this.btnCancel = new System.Windows.Forms.Label();
+            this.lNameCategory = new System.Windows.Forms.Label();
             this.tbSearch = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lNameCategory = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Label();
+            this.cmbMarks = new MetroFramework.Controls.MetroComboBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,14 +56,6 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 99);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(660, 408);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
             // metroPanel2
             // 
             this.metroPanel2.Controls.Add(this.lNameCategory);
@@ -82,28 +74,17 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // cmbMarks
+            // lNameCategory
             // 
-            this.cmbMarks.FormattingEnabled = true;
-            this.cmbMarks.ItemHeight = 23;
-            this.cmbMarks.Location = new System.Drawing.Point(127, 52);
-            this.cmbMarks.Name = "cmbMarks";
-            this.cmbMarks.PromptText = "Выберите производителя";
-            this.cmbMarks.Size = new System.Drawing.Size(203, 29);
-            this.cmbMarks.TabIndex = 2;
-            this.cmbMarks.UseSelectable = true;
-            this.cmbMarks.SelectedIndexChanged += new System.EventHandler(this.cmbMarks_SelectedIndexChanged);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.AutoSize = true;
-            this.btnCancel.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnCancel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnCancel.Location = new System.Drawing.Point(3, 57);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(118, 19);
-            this.btnCancel.TabIndex = 13;
-            this.btnCancel.Text = "Производитель:";
+            this.lNameCategory.AutoSize = true;
+            this.lNameCategory.Font = new System.Drawing.Font("Calibri Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lNameCategory.ForeColor = System.Drawing.Color.Red;
+            this.lNameCategory.Location = new System.Drawing.Point(3, 10);
+            this.lNameCategory.Name = "lNameCategory";
+            this.lNameCategory.Size = new System.Drawing.Size(257, 27);
+            this.lNameCategory.TabIndex = 15;
+            this.lNameCategory.Text = "Блок и головка цилиндров";
+            this.lNameCategory.TextChanged += new System.EventHandler(this.lNameCategory_TextChanged);
             // 
             // tbSearch
             // 
@@ -151,17 +132,36 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Поиск по названию:";
             // 
-            // lNameCategory
+            // btnCancel
             // 
-            this.lNameCategory.AutoSize = true;
-            this.lNameCategory.Font = new System.Drawing.Font("Calibri Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lNameCategory.ForeColor = System.Drawing.Color.Red;
-            this.lNameCategory.Location = new System.Drawing.Point(3, 10);
-            this.lNameCategory.Name = "lNameCategory";
-            this.lNameCategory.Size = new System.Drawing.Size(257, 27);
-            this.lNameCategory.TabIndex = 15;
-            this.lNameCategory.Text = "Блок и головка цилиндров";
-            this.lNameCategory.TextChanged += new System.EventHandler(this.lNameCategory_TextChanged);
+            this.btnCancel.AutoSize = true;
+            this.btnCancel.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnCancel.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnCancel.Location = new System.Drawing.Point(3, 57);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(118, 19);
+            this.btnCancel.TabIndex = 13;
+            this.btnCancel.Text = "Производитель:";
+            // 
+            // cmbMarks
+            // 
+            this.cmbMarks.FormattingEnabled = true;
+            this.cmbMarks.ItemHeight = 23;
+            this.cmbMarks.Location = new System.Drawing.Point(127, 52);
+            this.cmbMarks.Name = "cmbMarks";
+            this.cmbMarks.PromptText = "Выберите производителя";
+            this.cmbMarks.Size = new System.Drawing.Size(203, 29);
+            this.cmbMarks.TabIndex = 2;
+            this.cmbMarks.UseSelectable = true;
+            this.cmbMarks.SelectedIndexChanged += new System.EventHandler(this.cmbMarks_SelectedIndexChanged);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 99);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(660, 408);
+            this.flowLayoutPanel1.TabIndex = 2;
             // 
             // UCChooseMarkAndShowProduct
             // 
@@ -182,11 +182,11 @@
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label btnCancel;
         private MetroFramework.Controls.MetroTextBox tbSearch;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lNameCategory;
         public MetroFramework.Controls.MetroComboBox cmbMarks;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

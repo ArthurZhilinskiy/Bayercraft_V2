@@ -93,6 +93,12 @@
     <Compile Include="UCChooseMarkAndShowProduct.Designer.cs">
       <DependentUpon>UCChooseMarkAndShowProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCDeleter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDeleter.Designer.cs">
+      <DependentUpon>UCDeleter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +127,9 @@
     <EmbeddedResource Include="UCChooseMarkAndShowProduct.resx">
       <DependentUpon>UCChooseMarkAndShowProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCDeleter.resx">
+      <DependentUpon>UCDeleter.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-unsplash-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
