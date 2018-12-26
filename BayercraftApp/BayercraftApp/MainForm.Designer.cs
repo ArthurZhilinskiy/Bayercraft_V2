@@ -51,8 +51,8 @@
             this.btnCancel = new System.Windows.Forms.Label();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.btnAdd = new MetroFramework.Controls.MetroButton();
-            this.btnChange = new MetroFramework.Controls.MetroButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnBacket = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -365,8 +365,8 @@
             // 
             // metroPanel2
             // 
+            this.metroPanel2.Controls.Add(this.btnBacket);
             this.metroPanel2.Controls.Add(this.btnAdd);
-            this.metroPanel2.Controls.Add(this.btnChange);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
@@ -383,33 +383,17 @@
             this.btnAdd.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnAdd.FontWeight = MetroFramework.MetroButtonWeight.Light;
             this.btnAdd.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnAdd.Location = new System.Drawing.Point(11, 7);
+            this.btnAdd.Location = new System.Drawing.Point(4, 8);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(91, 23);
+            this.btnAdd.Size = new System.Drawing.Size(244, 23);
             this.btnAdd.Style = MetroFramework.MetroColorStyle.White;
             this.btnAdd.TabIndex = 3;
             this.btnAdd.TabStop = false;
-            this.btnAdd.Text = "Добавить";
+            this.btnAdd.Text = "Добавить производителя/товар";
             this.btnAdd.UseCustomBackColor = true;
             this.btnAdd.UseCustomForeColor = true;
             this.btnAdd.UseSelectable = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnChange
-            // 
-            this.btnChange.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btnChange.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btnChange.ForeColor = System.Drawing.Color.SteelBlue;
-            this.btnChange.Location = new System.Drawing.Point(107, 7);
-            this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(91, 23);
-            this.btnChange.Style = MetroFramework.MetroColorStyle.White;
-            this.btnChange.TabIndex = 3;
-            this.btnChange.TabStop = false;
-            this.btnChange.Text = "Изменить";
-            this.btnChange.UseCustomBackColor = true;
-            this.btnChange.UseCustomForeColor = true;
-            this.btnChange.UseSelectable = true;
             // 
             // flowLayoutPanel1
             // 
@@ -417,6 +401,23 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(677, 514);
             this.flowLayoutPanel1.TabIndex = 2;
+            // 
+            // btnBacket
+            // 
+            this.btnBacket.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnBacket.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.btnBacket.ForeColor = System.Drawing.Color.SteelBlue;
+            this.btnBacket.Location = new System.Drawing.Point(565, 8);
+            this.btnBacket.Name = "btnBacket";
+            this.btnBacket.Size = new System.Drawing.Size(109, 23);
+            this.btnBacket.Style = MetroFramework.MetroColorStyle.White;
+            this.btnBacket.TabIndex = 3;
+            this.btnBacket.TabStop = false;
+            this.btnBacket.Text = "Корзина";
+            this.btnBacket.UseCustomBackColor = true;
+            this.btnBacket.UseCustomForeColor = true;
+            this.btnBacket.UseSelectable = true;
+            this.btnBacket.Click += new System.EventHandler(this.btnBacket_Click);
             // 
             // MainForm
             // 
@@ -431,6 +432,7 @@
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.White;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
@@ -461,8 +463,8 @@
         private System.Windows.Forms.Label btnCancel;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroButton btnAdd;
-        private MetroFramework.Controls.MetroButton btnChange;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroButton btnBacket;
     }
 }

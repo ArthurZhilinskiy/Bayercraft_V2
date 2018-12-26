@@ -223,7 +223,7 @@ namespace BayercraftApp
                 image.Save(memoryStream, format);
                 OleDbParameter parameter3 = new OleDbParameter("Изображение", OleDbType.Binary);
                 parameter3.Value = memoryStream.ToArray();
-                command.Parameters.Add(parameter3); ;
+                command.Parameters.Add(parameter3);
 
                 OleDbParameter parameter4 = new OleDbParameter("ID_Марки", OleDbType.Integer);
                 parameter4.Value = Convert.ToInt32(getID_Марки(mark));

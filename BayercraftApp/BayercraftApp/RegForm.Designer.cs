@@ -53,6 +53,7 @@
             this.btnLogIn.UseCustomBackColor = true;
             this.btnLogIn.UseCustomForeColor = true;
             this.btnLogIn.UseSelectable = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // tbPassword
             // 
@@ -128,6 +129,7 @@
             this.btnCancel.Size = new System.Drawing.Size(68, 22);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Отмена";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label3
             // 

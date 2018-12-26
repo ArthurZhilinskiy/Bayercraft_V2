@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +15,15 @@ namespace BayercraftApp
     public partial class MainForm : MetroFramework.Forms.MetroForm
     {
         UCChooseMarkAndShowProduct uc;
-        public MainForm()
+        public string  UserLogin { get; set; }
+        public MainForm(string userLogin)
         {
             InitializeComponent();
             uc = new UCChooseMarkAndShowProduct();
+            this.UserLogin = userLogin;
+            uc.lNameUser.Text = UserLogin;
             flowLayoutPanel1.Controls.Add(uc);
+           
         }
 
         private void Hover(object sender, EventArgs e)
@@ -45,6 +51,25 @@ namespace BayercraftApp
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.Add(new UCAdd(this, uc));
             metroPanel1.Enabled = false;
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            MetroFramework.Controls.MetroTextBox tb = sender as MetroFramework.Controls.MetroTextBox;
+
+        }
+
+        private void btnBacket_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Controls.Add(new UCBacket(UserLogin,this, uc));
+            metroPanel1.Enabled = false;
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

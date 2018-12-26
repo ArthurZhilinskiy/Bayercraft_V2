@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,11 +36,43 @@ namespace BayercraftApp
             reg.ShowDialog();
           
         }
-
+        string connstring = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Application.StartupPath + @"\Bayerncraft.mdb";
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            OleDbConnection connection = new OleDbConnection(connstring);
+            try
+            {
+                connection.Open();
+
+                OleDbCommand command = new OleDbCommand("Select * From Пользователи WHERE Логин = ? AND Пароль = ?", connection);
+                OleDbParameter parameter = new OleDbParameter("Логин", OleDbType.VarChar);
+                parameter.Value = tbLogin.Text;
+                command.Parameters.Add(parameter);
+
+                OleDbParameter parameter1 = new OleDbParameter("Пароль", OleDbType.VarChar);
+                parameter1.Value = tbPassword.Text;
+                command.Parameters.Add(parameter1);
+
+                OleDbDataReader reader = command.ExecuteReader();
+                if (!reader.HasRows)
+                {
+                    tbLogin.WithError = true;
+                    tbPassword.WithError = true;
+                }
+                while (reader.Read())
+                {
+                    MainForm mainForm = new MainForm(tbLogin.Text);
+                    mainForm.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }

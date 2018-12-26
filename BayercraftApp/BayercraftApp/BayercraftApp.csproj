@@ -87,6 +87,24 @@
     <Compile Include="UCAdd.Designer.cs">
       <DependentUpon>UCAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCBacket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBacket.Designer.cs">
+      <DependentUpon>UCBacket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCBacketCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBacketCart.Designer.cs">
+      <DependentUpon>UCBacketCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCChange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChange.Designer.cs">
+      <DependentUpon>UCChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCChooseMarkAndShowProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +116,12 @@
     </Compile>
     <Compile Include="UCDeleter.Designer.cs">
       <DependentUpon>UCDeleter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCUpdate.Designer.cs">
+      <DependentUpon>UCUpdate.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
@@ -124,11 +148,23 @@
     <EmbeddedResource Include="UCAdd.resx">
       <DependentUpon>UCAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCBacket.resx">
+      <DependentUpon>UCBacket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCBacketCart.resx">
+      <DependentUpon>UCBacketCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCChange.resx">
+      <DependentUpon>UCChange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCChooseMarkAndShowProduct.resx">
       <DependentUpon>UCChooseMarkAndShowProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCDeleter.resx">
       <DependentUpon>UCDeleter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCUpdate.resx">
+      <DependentUpon>UCUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -155,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-delete-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-property-20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

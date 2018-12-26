@@ -31,11 +31,10 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.lNameCategory = new System.Windows.Forms.Label();
-            this.tbSearch = new MetroFramework.Controls.MetroTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Label();
             this.cmbMarks = new MetroFramework.Controls.MetroComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lNameUser = new System.Windows.Forms.Label();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -58,9 +57,8 @@
             // 
             // metroPanel2
             // 
+            this.metroPanel2.Controls.Add(this.lNameUser);
             this.metroPanel2.Controls.Add(this.lNameCategory);
-            this.metroPanel2.Controls.Add(this.tbSearch);
-            this.metroPanel2.Controls.Add(this.label1);
             this.metroPanel2.Controls.Add(this.btnCancel);
             this.metroPanel2.Controls.Add(this.cmbMarks);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
@@ -85,52 +83,6 @@
             this.lNameCategory.TabIndex = 15;
             this.lNameCategory.Text = "Блок и головка цилиндров";
             this.lNameCategory.TextChanged += new System.EventHandler(this.lNameCategory_TextChanged);
-            // 
-            // tbSearch
-            // 
-            // 
-            // 
-            // 
-            this.tbSearch.CustomButton.Image = null;
-            this.tbSearch.CustomButton.Location = new System.Drawing.Point(151, 1);
-            this.tbSearch.CustomButton.Name = "";
-            this.tbSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tbSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbSearch.CustomButton.TabIndex = 1;
-            this.tbSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbSearch.CustomButton.UseSelectable = true;
-            this.tbSearch.CustomButton.Visible = false;
-            this.tbSearch.DisplayIcon = true;
-            this.tbSearch.FontWeight = MetroFramework.MetroTextBoxWeight.Light;
-            this.tbSearch.Lines = new string[0];
-            this.tbSearch.Location = new System.Drawing.Point(487, 55);
-            this.tbSearch.MaxLength = 32767;
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.PasswordChar = '\0';
-            this.tbSearch.PromptText = "Введите текст для поиска";
-            this.tbSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbSearch.SelectedText = "";
-            this.tbSearch.SelectionLength = 0;
-            this.tbSearch.SelectionStart = 0;
-            this.tbSearch.ShortcutsEnabled = true;
-            this.tbSearch.Size = new System.Drawing.Size(173, 23);
-            this.tbSearch.TabIndex = 14;
-            this.tbSearch.UseSelectable = true;
-            this.tbSearch.WaterMark = "Введите текст для поиска";
-            this.tbSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(336, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 19);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Поиск по названию:";
             // 
             // btnCancel
             // 
@@ -163,6 +115,16 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(660, 408);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
+            // lNameUser
+            // 
+            this.lNameUser.AutoSize = true;
+            this.lNameUser.Location = new System.Drawing.Point(550, 24);
+            this.lNameUser.Name = "lNameUser";
+            this.lNameUser.Size = new System.Drawing.Size(35, 13);
+            this.lNameUser.TabIndex = 16;
+            this.lNameUser.Text = "label1";
+            this.lNameUser.Visible = false;
+            // 
             // UCChooseMarkAndShowProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,12 +143,11 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.Label btnCancel;
-        private MetroFramework.Controls.MetroTextBox tbSearch;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lNameCategory;
         public MetroFramework.Controls.MetroComboBox cmbMarks;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public MetroFramework.Controls.MetroPanel metroPanel2;
+        public System.Windows.Forms.Label lNameUser;
     }
 }
